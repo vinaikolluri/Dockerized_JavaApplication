@@ -4,17 +4,14 @@ Step-by-Step Guide: Deploying a Spring Boot Monolithic Application with Docker C
 Step 1: Update application.properties
 Modify your src/main/resources/application.properties to use environment variables:
 spring.application.name=Monolithic
-
 # Database Configuration (Use environment variables)
 spring.datasource.url=jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?createDatabaseIfNotExist=true
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.username=${DB_USER}
 spring.datasource.password=${DB_PASSWORD}
-
 # JPA Configuration
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
-
 # Server Port
 server.port=${SERVER_PORT}
 
